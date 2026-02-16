@@ -7,8 +7,8 @@ type User struct {
 	Username string `json:"username" gorm:"not null"`
 	Password string `json:"password" gorm:"not null"`
 
-	Roles []Role `json:"role" gorm:"many2many:user_roles"`
+	Roles []Role `json:"roles" gorm:"many2many:user_roles;"`
 
-	CreatedAt time.Time `json:"created_at" gorm:""`
-	UpdatedAt time.Time `json:"updated_at" gorm:""`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
 }

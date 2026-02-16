@@ -1,6 +1,6 @@
 package domain
 
 type UserRole struct {
-	UserID uint `gorm:"primaryKey"`
-	RoleID uint `gorm:"primaryKey"`
+	UserID uint64 `gorm:"primaryKey"`
+	RoleID uint64 `gorm:"primaryKey"`
 }
