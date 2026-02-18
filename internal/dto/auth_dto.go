@@ -6,14 +6,7 @@ import "time"
 type RegisterRequest struct {
 	Username string `json:"username" binding:"required, min=2, max=100"`
 	Password string `json:"password" binding:"required, min=8"`
-}
-
-// STEP2
-type RegisterAdminProfileRequest struct {
-	Name    string `json:"name" bindning:"required"`
-	Phone   string `json:"phone" binding:"required"`
-	Address string `json:"address"`
-	Photo   string `json:"photo"`
+	Role     string `json:"role" binding:"required, oneof=admin dokter perawat"`
 }
 
 type UserResponse struct {
